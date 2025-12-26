@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naar Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Naar Chat</h1>
+      <p class="subtitle">Chat in real time with anyone connected to this room.</p>
+    </header>
+    <section class="chat-window" id="chat">
+      <ul id="messages"></ul>
+    </section>
+    <form id="chat-form" autocomplete="off">
+      <div class="input-row">
+        <label>
+          Name
+          <input type="text" id="name" placeholder="Your name" value="" maxlength="32">
+        </label>
+        <label class="message-label">
+          Message
+          <input type="text" id="message" placeholder="Type a message" required maxlength="240">
+        </label>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
